@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visit Denmark</title>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        font-family: "Celebri Sans", Arial, Helvetica, sans-serif;
+        color: #fff;
+      }
+      h1 {
+        text-align: center;
+        color: #7d51e8;
+      }
+
+      h2 {
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 1px solid #7d51e8;
+        border-radius: 4px;
+        padding: 15px;
+        font-size: 18px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 6px;
+      }
+
+      div {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #7d51e8;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: 20px;
+        margin: 20px 0 10px;
+      }
+      span {
+        display: block;
+        text-align: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: 20px;
+        margin: 20 px 0 10px;
+      }
+      .prices {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: 18px;
+        margin: 10px 0 10px;
+      }
+
+      button {
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 20px auto;
+        background-color: #7d51e8;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        transition: opacticy 150ms ease;
+        opacity: 1;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 10px 60px;
+      }
+      .learn-more {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+        color: #7d51e8;
+      }
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>✈ Visit Copenhaguen!</h1>
+      <h2>Local goods, sightseeing, tours and more 👇</h2>
+      <img
+        src="https://images.ctfassets.net/6xuvngqqn06x/6crDKfgZ5YwA5XkeXWJB6e/8d445501132de317faef7b097b063321/shutterstock_kavalenkava_Denmark_Copenhagen.jpg?fm=jpg&fit=fill&w=1200&h=630&f=faces&q=90"
+        alt="Copenhaguen"
+      />
+      <p>
+        Visit Denmark's picturesque small towns, walk through centuries of
+        Danish history and discover Copenhagen, Denmark's laid-back capital, on
+        a guided tour. <em>Explore</em> the unique culture and landscape of
+        Bornholm and the stunning seascapes of North Jutland.
+        <br />
+        <br />
+        Choose from 32 guided coach trips and small group tours to explore Hans
+        Christian Andersen's magical homeland with colourful cobblestone
+        villages and majestic castles.
+      </p>
+
+      <div>
+        <span> Country Roads of Scandinavia ❤ </span>
+
+        <img
+          src="https://www.adventurebikerider.com/wp-content/uploads/2017/08/route-one-iceland-5-epic-roads-to-ride-in-scandinavia.jpg"
+        />
+        <p class="prices">Price: 750€/person</p>
+      </div>
+      <div>
+        <span> Timeless Scandinavia ❤ </span>
+        <img
+          src="https://media.resources.festicket.com/www/magazine/Scandinavia_L_k3s8eMx.jpg"
+        />
+        <p class="prices">Price: 900€/person</p>
+      </div>
+      <div>
+        <span> Discover Majestic Rosenborg Castle ❤ </span>
+        <img
+          src="https://files.guidedanmark.org/files/382/199802_Rosenborg_Thomas_Hyrup_Christensen.jpg"
+        />
+        <p class="prices">Price: 1.500€/person</p>
+      </div>
+
+      <a
+        href="https://www.globaljourneys.com/tours/denmark"
+        target="_blank"
+        class="learn-more"
+        >View all 32 Denmark Tours</a
+      >
+      <button class="buy-button">Shop Tour!</button>
+
+      <p class="footer">
+        This page was built by Alexis R. Forbes with HTML, CSS and JavaScript.
+        <a href="https://github.com/alexis-forbes" target="_blank"></a>
+      </p>
+    </div>
+
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let tour = prompt("Which tour would you like to purchase?");
+
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            " ✨ Thank you, " +
+              name +
+              "! We will be in touch by email, congrats on purchasing your tour! 👉" +
+              tour
+          );
+        } else {
+          alert("Sorry, you did not choose a tour! 😥");
+        }
+      }
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
